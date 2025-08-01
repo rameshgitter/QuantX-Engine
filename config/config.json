@@ -1,0 +1,124 @@
+{
+  "engine": {
+    "name": "QuantX Engine",
+    "version": "1.0.0",
+    "initial_capital": 1000000.0,
+    "paper_trading": true,
+    "log_level": "INFO"
+  },
+  "market_data": {
+    "provider": "NSE_BSE",
+    "websocket_url": "wss://api.kite.trade/ws",
+    "api_key": "your_api_key_here",
+    "access_token": "your_access_token_here",
+    "symbols": [
+      "NSE:NIFTY50",
+      "NSE:BANKNIFTY",
+      "NSE:RELIANCE",
+      "NSE:TCS",
+      "NSE:INFY",
+      "NSE:HDFCBANK",
+      "NSE:ICICIBANK",
+      "NSE:KOTAKBANK",
+      "NSE:LT",
+      "NSE:WIPRO"
+    ],
+    "reconnect_interval": 5000,
+    "heartbeat_interval": 30000
+  },
+  "ml_models": {
+    "lob_predictor": {
+      "model_path": "models/lob_lstm_predictor.onnx",
+      "normalization_params": "models/lob_normalization_params.json",
+      "prediction_threshold": 0.3,
+      "confidence_threshold": 0.7
+    },
+    "iv_predictor": {
+      "model_path": "models/iv_surface_predictor.onnx",
+      "update_interval": 60000
+    },
+    "ensemble_predictor": {
+      "model_path": "models/ensemble_predictor.onnx",
+      "lob_weight": 0.6,
+      "iv_weight": 0.4
+    }
+  },
+  "risk_management": {
+    "max_position_value": 100000.0,
+    "max_portfolio_value": 2000000.0,
+    "max_daily_loss": 50000.0,
+    "max_drawdown": 0.15,
+    "var_limit": 30000.0,
+    "leverage_limit": 2.0,
+    "max_orders_per_second": 5,
+    "max_orders_per_minute": 50,
+    "symbol_limits": {
+      "NSE:NIFTY50": 200000.0,
+      "NSE:BANKNIFTY": 150000.0,
+      "NSE:RELIANCE": 100000.0
+    }
+  },
+  "trading": {
+    "default_order_size": 100,
+    "max_order_size": 500,
+    "order_timeout": 30000,
+    "fill_timeout": 60000,
+    "slippage_tolerance": 0.0005,
+    "strategies": {
+      "momentum": {
+        "enabled": true,
+        "lookback_period": 20,
+        "threshold": 0.02
+      },
+      "mean_reversion": {
+        "enabled": true,
+        "lookback_period": 50,
+        "threshold": 0.015
+      },
+      "arbitrage": {
+        "enabled": false,
+        "min_spread": 0.001
+      }
+    }
+  },
+  "paper_trading": {
+    "fill_probability": 0.95,
+    "slippage_factor": 0.0002,
+    "fill_delay_ms": 100,
+    "commission_rate": 0.0003
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "database": "quantx_engine",
+    "username": "quantx",
+    "password": "quantx_secure_password",
+    "connection_pool_size": 10
+  },
+  "monitoring": {
+    "metrics_port": 8081,
+    "health_check_port": 8082,
+    "log_file": "logs/quantx_engine.log",
+    "performance_log": "logs/performance.log",
+    "trade_log": "logs/trades.log"
+  },
+  "alerts": {
+    "email": {
+      "enabled": false,
+      "smtp_server": "smtp.gmail.com",
+      "smtp_port": 587,
+      "username": "your_email@gmail.com",
+      "password": "your_app_password",
+      "recipients": ["admin@yourcompany.com"]
+    },
+    "slack": {
+      "enabled": false,
+      "webhook_url": "https://hooks.slack.com/services/YOUR/SLACK/WEBHOOK"
+    },
+    "telegram": {
+      "enabled": false,
+      "bot_token": "your_bot_token",
+      "chat_id": "your_chat_id"
+    }
+  }
+}
