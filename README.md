@@ -271,7 +271,7 @@ quantx-engine/
 ### Adding New Features
 
 1. **New ML Model**:
-   ```python
+   \`\`\`python
    # Add to scripts/export_models_to_onnx.py
    def train_new_model():
        # Training code here
