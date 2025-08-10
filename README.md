@@ -460,6 +460,32 @@ Special thanks to the open-source community and these amazing projects:
 
 <div align="center">
 
+## 📊 Project Statistics
+
+### ⭐ Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=rameshgitter/QuantX-Engine&type=Date)](https://star-history.com/#rameshgitter/QuantX-Engine&Date)
+
+### 📈 Repository Stats
+![GitHub stars](https://img.shields.io/github/stars/rameshgitter/QuantX-Engine?style=for-the-badge&logo=github)
+![GitHub forks](https://img.shields.io/github/forks/rameshgitter/QuantX-Engine?style=for-the-badge&logo=github)
+![GitHub issues](https://img.shields.io/github/issues/rameshgitter/QuantX-Engine?style=for-the-badge&logo=github)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/rameshgitter/QuantX-Engine?style=for-the-badge&logo=github)
+
+### 👥 Contributors & Activity
+![GitHub contributors](https://img.shields.io/github/contributors/rameshgitter/QuantX-Engine?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/rameshgitter/QuantX-Engine?style=for-the-badge)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/rameshgitter/QuantX-Engine?style=for-the-badge)
+
+### 📊 Code Statistics
+![GitHub repo size](https://img.shields.io/github/repo-size/rameshgitter/QuantX-Engine?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/rameshgitter/QuantX-Engine?style=for-the-badge)
+![GitHub top language](https://img.shields.io/github/languages/top/rameshgitter/QuantX-Engine?style=for-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/rameshgitter/QuantX-Engine?style=for-the-badge)
+
+### 📋 Project Health
+![GitHub release](https://img.shields.io/github/v/release/rameshgitter/QuantX-Engine?style=for-the-badge)
+![GitHub downloads](https://img.shields.io/github/downloads/rameshgitter/QuantX-Engine/total?style=for-the-badge)
+
 **🎯 Built with ❤️ for the quantitative trading community**
 
 ⭐ **Star this repo** if you find it useful! ⭐
